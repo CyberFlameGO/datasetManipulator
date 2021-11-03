@@ -19,8 +19,8 @@ dataframe: Union[Union[pandas.io.parsers.TextFileReader, Series, DataFrame, None
     pd.read_csv(dataset, sep = '\t')
 sample: Union[Union[pandas.io.parsers.TextFileReader, Series, DataFrame, None, NDFrame], Any] = \
     dataframe.sample(sample_size, replace = True, random_state = random_state)
-sample_paths = sample[dataframe_column].tolist()
+sample_paths: Union[list, object] = sample[dataframe_column].tolist()
 
-assert isinstance(sample_paths, object)
+assert isinstance(list, object)
 for i in sample_paths:
     shutil.copy2(f"./clips/{i}", sample_output)
