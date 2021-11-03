@@ -21,4 +21,4 @@ sample_paths = sample[dataframe_column].tolist()
 
 for i in sample_paths:
     shutil.copy2(f"./clips/{i}", sample_output)
-    print(i)
+
